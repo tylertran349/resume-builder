@@ -17,6 +17,7 @@ class Education extends Component {
             educationItems: []
         };
 
+        this.addItem = this.addItem.bind(this);
         this.changeInstitution = this.changeInstitution.bind(this);
         this.changeCredential = this.changeCredential.bind(this);
         this.changeStartDate = this.changeStartDate.bind(this);
@@ -27,7 +28,7 @@ class Education extends Component {
         const { educationItems, educationItem } = this.state;
         e.preventDefault();
         this.setState({
-            educationItems: educationItems.concat(educationItem),
+            educationItems: [...educationItems, educationItem],
             educationItem: {
                 institution: '',
                 credential: '',

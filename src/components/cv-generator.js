@@ -18,7 +18,12 @@ function EducationGenerator(props) {
         <div id="education-section">
             <span>Generated CV - Education</span>
             {educationItems.map((item) => {
-                return <span>{item.institution}</span>
+                console.log(item.institution);
+                return (
+                    <div>
+                        <span>Institution: {item.institution}</span>
+                    </div>
+                )
             })}
         </div>
     )
