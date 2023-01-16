@@ -10,3 +10,21 @@ form {
     flex-direction: column;
     align-items: center;
 }
+
+#education-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#personal-info-section, #education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#education-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
