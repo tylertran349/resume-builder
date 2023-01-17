@@ -13,18 +13,15 @@ function PersonalInfoGenerator(props) {
 }
 
 function EducationGenerator(props) {
-    const { educationItems } = props;
+    const { institution, credential, startDate, endDate, id  } = props;
     return (
-        <div id="education-section">
-            <span>Generated CV - Education</span>
-            {educationItems.map((item) => {
-                console.log(item.institution);
-                return (
-                    <div>
-                        <span>Institution: {item.institution}</span>
-                    </div>
-                )
-            })}
+        <div>
+            <span>Institution: {institution}</span>
+            <span>Credential: {credential}</span>
+            <span>Start date: {startDate}</span>
+            <span>End date: {endDate}</span>
+            <span>ID: {id}</span>
+            <br></br>
         </div>
     )
 }
