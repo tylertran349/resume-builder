@@ -18,6 +18,7 @@ class Education extends Component {
         };
 
         this.addItem = this.addItem.bind(this);
+        this.removeItem = this.removeItem.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
@@ -36,6 +37,17 @@ class Education extends Component {
         });
     }
 
+    removeItem = (e) => {
+        const { educationItems, educationItem } = this.state;
+        e.preventDefault();
+        console.log(e.target.id);
+        let tempList = educationItems;
+        tempList.splice(e.target.id, 1);
+        this.setState({
+            educationItems: tempList
+        });
+    }
+
     handleInputChange(event) {
         
     }
@@ -45,14 +57,14 @@ class Education extends Component {
         return (
             <div id="education-form">
                 <span id="form-section-title">Education</span>
-                {educationItems.map((item) => {
+                {educationItems.map((item, index) => {
                     return (
                     <form>
-                        <input type="text" placeholder="Name of university/institution" onChange={this.handleInputChange}></input>
+                        <input id={index} type="text" placeholder="Name of university/institution" onChange={this.handleInputChange}></input>
                         <input type="text" placeholder="Degree/credential" onChange={this.handleInputChange}></input>
                         <input type="text" placeholder="Start date" onChange={this.handleInputChange}></input>
                         <input type="text" placeholder="End date" onChange={this.handleInputChange}></input>
-                        <button>Delete</button>
+                        <button id={index} onClick={this.removeItem}>Delete</button>
                     </form>
                     )
                 })}
