@@ -41,15 +41,20 @@ class Education extends Component {
         const { educationItems, educationItem } = this.state;
         e.preventDefault();
         console.log(e.target.id);
-        let tempList = educationItems;
-        tempList.splice(e.target.id, 1);
+        let tempList = educationItems; // Create temporary list to store educationItems (prior to item deletion)
+        tempList.splice(e.target.id, 1); // Delete the item from tempList (tempList now contains the correct array)
         this.setState({
-            educationItems: tempList
+            educationItems: tempList // Set educationItems to be tempList
         });
     }
 
-    handleInputChange(event) {
-        
+    handleInputChange = (e) => {
+        const { educationItems } = this.state;
+        let tempList = educationItems;
+        tempList[e.target.id][e.target.name] = e.target.value;
+        this.setState({
+            educationItems: tempList
+        });
     }
 
     render() {
@@ -60,16 +65,15 @@ class Education extends Component {
                 {educationItems.map((item, index) => {
                     return (
                     <form>
-                        <input id={index} type="text" placeholder="Name of university/institution" onChange={this.handleInputChange}></input>
-                        <input type="text" placeholder="Degree/credential" onChange={this.handleInputChange}></input>
-                        <input type="text" placeholder="Start date" onChange={this.handleInputChange}></input>
-                        <input type="text" placeholder="End date" onChange={this.handleInputChange}></input>
+                        <input id={index} name="institution" type="text" placeholder="Name of university/institution" onChange={this.handleInputChange}></input>
+                        <input id={index} name="credential" type="text" placeholder="Degree/credential" onChange={this.handleInputChange}></input>
+                        <input id={index} name="startDate" type="text" placeholder="Start date" onChange={this.handleInputChange}></input>
+                        <input id={index} name="endDate" type="text" placeholder="End date" onChange={this.handleInputChange}></input>
                         <button id={index} onClick={this.removeItem}>Delete</button>
                     </form>
                     )
                 })}
                 <button onClick={this.addItem}>Add Education Item</button>
-                {/*
                 <div id="education-section">
                     {educationItems.map((item) => {
                         return (
@@ -77,7 +81,6 @@ class Education extends Component {
                         )
                     })}
                 </div>
-                */}
             </div>
         )
     }
