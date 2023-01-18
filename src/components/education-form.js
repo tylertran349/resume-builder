@@ -18,10 +18,7 @@ class Education extends Component {
         };
 
         this.addItem = this.addItem.bind(this);
-        this.changeInstitution = this.changeInstitution.bind(this);
-        this.changeCredential = this.changeCredential.bind(this);
-        this.changeStartDate = this.changeStartDate.bind(this);
-        this.changeEndDate = this.changeEndDate.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     addItem = (e) => {
@@ -39,56 +36,8 @@ class Education extends Component {
         });
     }
 
-    changeInstitution = (e) => {
-        e.preventDefault();
-        this.setState({ 
-            educationItem: {
-                institution: e.target.value,
-                credential: this.state.educationItem.credential,
-                startDate: this.state.educationItem.startDate,
-                endDate: this.state.educationItem.endDate,
-                id: this.state.educationItem.id
-            }
-        });
-    }
-
-    changeCredential = (e) => {
-        e.preventDefault();
-        this.setState({ 
-            educationItem: {
-                institution: this.state.educationItem.institution,
-                credential: e.target.value,
-                startDate: this.state.educationItem.startDate,
-                endDate: this.state.educationItem.endDate,
-                id: this.state.educationItem.id
-            }
-        });
-    }
-
-    changeStartDate = (e) => {
-        e.preventDefault();
-        this.setState({ 
-            educationItem: {
-                institution: this.state.educationItem.institution,
-                credential: this.state.educationItem.credential,
-                startDate: e.target.value,
-                endDate: this.state.educationItem.endDate,
-                id: this.state.educationItem.id
-            }
-        });
-    }
-
-    changeEndDate = (e) => {
-        e.preventDefault();
-        this.setState({ 
-            educationItem: {
-                institution: this.state.educationItem.institution,
-                credential: this.state.educationItem.credential,
-                startDate: this.state.educationItem.startDate,
-                endDate: e.target.value,
-                id: this.state.educationItem.id
-            }
-        });
+    handleInputChange(event) {
+        
     }
 
     render() {
@@ -99,15 +48,16 @@ class Education extends Component {
                 {educationItems.map((item) => {
                     return (
                     <form>
-                        <input type="text" placeholder="Name of university/institution" onChange={this.changeInstitution}></input>
-                        <input type="text" placeholder="Degree/credential" onChange={this.changeCredential}></input>
-                        <input type="text" placeholder="Start date" onChange={this.changeStartDate}></input>
-                        <input type="text" placeholder="End date" onChange={this.changeEndDate}></input>
+                        <input type="text" placeholder="Name of university/institution" onChange={this.handleInputChange}></input>
+                        <input type="text" placeholder="Degree/credential" onChange={this.handleInputChange}></input>
+                        <input type="text" placeholder="Start date" onChange={this.handleInputChange}></input>
+                        <input type="text" placeholder="End date" onChange={this.handleInputChange}></input>
                         <button>Delete</button>
                     </form>
                     )
                 })}
                 <button onClick={this.addItem}>Add Education Item</button>
+                {/*
                 <div id="education-section">
                     {educationItems.map((item) => {
                         return (
@@ -115,6 +65,7 @@ class Education extends Component {
                         )
                     })}
                 </div>
+                */}
             </div>
         )
     }
