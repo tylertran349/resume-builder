@@ -16,6 +16,7 @@ function EducationGenerator(props) {
     const { educationItems  } = props;
     return (
         <div id="education-section">
+            <span>Generated CV - Education</span>
             {educationItems.map((item) => {
                 return (
                     <div>
@@ -23,7 +24,6 @@ function EducationGenerator(props) {
                         <span>Credential: {item.credential}</span>
                         <span>Start date: {item.startDate}</span>
                         <span>End date: {item.endDate}</span>
-                        <span>ID: {item.id}</span>
                         <br></br>
                     </div> 
                 )
@@ -36,6 +36,7 @@ function ExperienceGenerator(props) {
     const { experienceItems } = props;
     return (
         <div id="experience-section">
+            <span>Generated CV - Experience</span>
             {experienceItems.map((item) => {
                 return (
                     <div>
@@ -44,7 +45,6 @@ function ExperienceGenerator(props) {
                         <span>Job description: {item.jobDescription}</span>
                         <span>Start date: {item.startDate}</span>
                         <span>End date: {item.endDate}</span>
-                        <span>ID: {item.id}</span>
                         <br></br>
                     </div> 
                 )
