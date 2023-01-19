@@ -13,17 +13,44 @@ function PersonalInfoGenerator(props) {
 }
 
 function EducationGenerator(props) {
-    const { institution, credential, startDate, endDate, id  } = props;
+    const { educationItems  } = props;
     return (
-        <div>
-            <span>Institution: {institution}</span>
-            <span>Credential: {credential}</span>
-            <span>Start date: {startDate}</span>
-            <span>End date: {endDate}</span>
-            <span>ID: {id}</span>
-            <br></br>
+        <div id="education-section">
+            {educationItems.map((item) => {
+                return (
+                    <div>
+                        <span>Institution: {item.institution}</span>
+                        <span>Credential: {item.credential}</span>
+                        <span>Start date: {item.startDate}</span>
+                        <span>End date: {item.endDate}</span>
+                        <span>ID: {item.id}</span>
+                        <br></br>
+                    </div> 
+                )
+            })}
         </div>
     )
 }
 
-export { PersonalInfoGenerator, EducationGenerator };
+function ExperienceGenerator(props) {
+    const { experienceItems } = props;
+    return (
+        <div id="experience-section">
+            {experienceItems.map((item) => {
+                return (
+                    <div>
+                        <span>Company name: {item.companyName}</span>
+                        <span>Job title: {item.jobTitle}</span>
+                        <span>Job description: {item.jobDescription}</span>
+                        <span>Start date: {item.startDate}</span>
+                        <span>End date: {item.endDate}</span>
+                        <span>ID: {item.id}</span>
+                        <br></br>
+                    </div> 
+                )
+            })}
+        </div>
+    )
+}
+
+export { PersonalInfoGenerator, EducationGenerator, ExperienceGenerator };

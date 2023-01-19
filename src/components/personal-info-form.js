@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { PersonalInfoGenerator } from "./cv-generator";
+import { PersonalInfoGenerator } from "./cv-generator"
 
 class PersonalInfo extends Component {
     constructor() {
