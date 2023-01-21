@@ -1,39 +1,24 @@
 import React, { Component } from "react";
-import { PersonalInfoGenerator } from "./cv-generator"
 
-class PersonalInfo extends Component {
-    constructor() {
-      super();
-  
-      this.state = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phoneNumber: ''
-      };
-      
-      this.handleInputChange = this.handleInputChange.bind(this);
-    }
+export class PersonalInfoForm extends Component {
+  constructor(props) {
+    super(props);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
 
-    handleInputChange = (e) => {
-      this.setState({
-        [e.target.name]: e.target.value
-      })
-    }
-  
-    render() {
-      const { firstName, lastName, email, phoneNumber } = this.state; // Destructure state
-      return <div id="personal-info-form">
-        <form>
+  handleInputChange(e) {
+    this.props.handleInputChange(e.target.value, e.target.name, null, null);
+  }
+
+  render() {
+    return (
+        <form id="personal-info-form">
           <span id="form-section-title">Personal Information</span>
-          <input type="text" name="firstName" placeholder="First name" onChange={this.handleInputChange}></input>
-          <input type="text" name="lastName" placeholder="Last name" onChange={this.handleInputChange}></input>
-          <input type="text" name="email" placeholder="Email" onChange={this.handleInputChange}></input>
-          <input type="text" name="phoneNumber" placeholder="Phone number" onChange={this.handleInputChange}></input>
+          <input type="text" name="firstName" placeholder="First name" value={this.props.firstName} onChange={this.handleInputChange}></input>
+          <input type="text" name="lastName" placeholder="Last name" value={this.props.lastName} onChange={this.handleInputChange}></input>
+          <input type="text" name="email" placeholder="Email"  value={this.props.email} onChange={this.handleInputChange}></input>
+          <input type="text" name="phoneNumber" placeholder="Phone number" value={this.props.phoneNumber} onChange={this.handleInputChange}></input>
         </form>
-        <PersonalInfoGenerator firstName={firstName} lastName={lastName} email={email} phoneNumber={phoneNumber} />
-      </div>;
-    }
+    )
+  }
 }
-
-export { PersonalInfo };
