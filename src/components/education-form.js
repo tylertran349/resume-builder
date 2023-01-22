@@ -29,8 +29,10 @@ export class EducationForm extends Component {
                     <form>
                         <input id={index} name="institution" type="text" placeholder="Name of university/institution" value={item.institution} onChange={this.handleInputChange}></input>
                         <input id={index} name="credential" type="text" placeholder="Degree/credential" value={item.credential} onChange={this.handleInputChange}></input>
-                        <input id={index} name="startDate" type="date" data-date="" data-date-format="MMMM DD YYYY" placeholder="Start date" value={item.startDate} onChange={this.handleInputChange}></input>
-                        <input id={index} name="endDate" type="date" data-date="" data-date-format="MMMM DD YYYY" placeholder="End date" value={item.endDate} onChange={this.handleInputChange}></input>
+                        <label for="startDate">Start Date</label>
+                        <input id={index} name="startDate" type="month" data-date="" data-date-format="MMMM YYYY" value={item.startDate} onChange={this.handleInputChange}></input>
+                        <label for="endDate">End Date</label>
+                        <input id={index} name="endDate" type="month" data-date="" data-date-format="MMMM YYYY" value={item.endDate} onChange={this.handleInputChange}></input>
                         <button id={index} onClick={this.deleteItem}>Delete</button>
                     </form>
                     )

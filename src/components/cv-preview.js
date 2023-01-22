@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import moment from "moment";
 
 function CVPreview(props) {
@@ -31,7 +31,7 @@ function CVPreview(props) {
                                 <span>Institution: {item.institution}</span>
                                 <span>Credential: {item.credential}</span>
                                 <span>Start date:</span>
-                                <span>End date: {moment(item.endDate).format('MM/DD/YYYY')}</span>
+                                <span>End date: {moment(item.endDate).format('MMMM YYYY')}</span>
                                 <br></br>
                             </div> 
                         )
@@ -40,7 +40,7 @@ function CVPreview(props) {
                             <div>
                                 <span>Institution: {item.institution}</span>
                                 <span>Credential: {item.credential}</span>
-                                <span>Start date: {moment(item.startDate).format('MM/DD/YYYY')}</span>
+                                <span>Start date: {moment(item.startDate).format('MMMM YYYY')}</span>
                                 <span>End date:</span>
                                 <br></br>
                             </div> 
@@ -50,8 +50,8 @@ function CVPreview(props) {
                             <div>
                                 <span>Institution: {item.institution}</span>
                                 <span>Credential: {item.credential}</span>
-                                <span>Start date: {moment(item.startDate).format('MM/DD/YYYY')}</span>
-                                <span>End date: {moment(item.endDate).format('MM/DD/YYYY')}</span>
+                                <span>Start date: {moment(item.startDate).format('MMMM YYYY')}</span>
+                                <span>End date: {moment(item.endDate).format('MMMM YYYY')}</span>
                                 <br></br>
                             </div> 
                         )
@@ -79,7 +79,7 @@ function CVPreview(props) {
                                 <span>Job title: {item.jobTitle}</span>
                                 <span>Job description: {item.jobDescription}</span>
                                 <span>Start date:</span>
-                                <span>End date: {moment(item.endDate).format('MM/DD/YYYY')}</span>
+                                <span>End date: {moment(item.endDate).format('MMMM YYYY')}</span>
                                 <br></br>
                             </div> 
                         )
@@ -89,7 +89,7 @@ function CVPreview(props) {
                                 <span>Company name: {item.companyName}</span>
                                 <span>Job title: {item.jobTitle}</span>
                                 <span>Job description: {item.jobDescription}</span>
-                                <span>Start date: {moment(item.startDate).format('MM/DD/YYYY')}</span>
+                                <span>Start date: {moment(item.startDate).format('MMMM YYYY')}</span>
                                 <span>End date:</span>
                                 <br></br>
                             </div> 
@@ -100,8 +100,8 @@ function CVPreview(props) {
                                 <span>Company name: {item.companyName}</span>
                                 <span>Job title: {item.jobTitle}</span>
                                 <span>Job description: {item.jobDescription}</span>
-                                <span>Start date: {moment(item.startDate).format('MM/DD/YYYY')}</span>
-                                <span>End date: {moment(item.endDate).format('MM/DD/YYYY')}</span>
+                                <span>Start date: {moment(item.startDate).format('MMMM YYYY')}</span>
+                                <span>End date: {moment(item.endDate).format('MMMM YYYY')}</span>
                                 <br></br>
                             </div> 
                         )

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import uniqid from "uniqid";
+import { Header } from "./components/header"
 import { PersonalInfoForm } from "./components/personal-info-form";
 import { EducationForm } from "./components/education-form"
 import { ExperienceForm } from "./components/experience-form"
@@ -121,6 +122,7 @@ class App extends Component {
   render() {
     return (
       <div id="content">
+        <Header />
         <PersonalInfoForm firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email}
         phoneNumber={this.state.phoneNumber} handleInputChange={this.handleInputChange} />
         <EducationForm educationItems={this.state.educationItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
