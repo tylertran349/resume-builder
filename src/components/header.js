@@ -2,8 +2,8 @@ import React from "react";
 
 function Header() {
     return (
-        <span id="header">Resume Builder</span>
-    )
+        <span id="header">RESUME BUILDER</span>
+    );
 }
 
 export { Header };
