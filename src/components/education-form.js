@@ -22,23 +22,23 @@ export class EducationForm extends Component {
 
   render() {
     return (
-        <div id="education-forms">
-            <span id="form-section-title">Education</span>
+        <div id="education-form">
+                <span id="form-section-title">Education</span>
                 {this.props.educationItems.map((item, index) => {
                     return (
-                    <form id="education-item-form">
+                    <form>
                         <input id={index} name="institution" type="text" placeholder="Name of university/institution" value={item.institution} onChange={this.handleInputChange}></input>
                         <input id={index} name="credential" type="text" placeholder="Degree/credential" value={item.credential} onChange={this.handleInputChange}></input>
                         <label for="startDate">Start Date</label>
                         <input id={index} name="startDate" type="month" data-date="" data-date-format="MMMM YYYY" value={item.startDate} onChange={this.handleInputChange}></input>
                         <label for="endDate">End Date</label>
                         <input id={index} name="endDate" type="month" data-date="" data-date-format="MMMM YYYY" value={item.endDate} onChange={this.handleInputChange}></input>
-                        <button class="delete-item-button" id={index} onClick={this.deleteItem}>Delete Item</button>
+                        <button id={index} onClick={this.deleteItem}>Delete</button>
                     </form>
                     )
                 })}
-            <button id="add-item-button" onClick={this.addItem}>Add Item</button>
-        </div>
+                <button onClick={this.addItem}>Add Education Item</button>
+            </div>
     )
   }
 }
