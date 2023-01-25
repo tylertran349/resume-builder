@@ -5,6 +5,7 @@ import { PersonalInfoForm } from "./components/personal-info-form";
 import { EducationForm } from "./components/education-form"
 import { ExperienceForm } from "./components/experience-form"
 import { CVPreview } from "./components/cv-preview";
+import { Footer } from "./components/footer"
 
 class App extends Component {
   constructor(props) {
@@ -123,11 +124,14 @@ class App extends Component {
     return (
       <div id="content">
         <Header />
-        <PersonalInfoForm firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email}
-        phoneNumber={this.state.phoneNumber} handleInputChange={this.handleInputChange} />
-        <EducationForm educationItems={this.state.educationItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
-        <ExperienceForm experienceItems={this.state.experienceItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
+        <div id="forms">
+          <PersonalInfoForm firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email}
+          phoneNumber={this.state.phoneNumber} handleInputChange={this.handleInputChange} />
+          <EducationForm educationItems={this.state.educationItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
+          <ExperienceForm experienceItems={this.state.experienceItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
+        </div>
         <CVPreview firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} phoneNumber={this.state.phoneNumber} educationItems={this.state.educationItems} experienceItems={this.state.experienceItems} />
+        <Footer />
       </div>
     )
   }
