@@ -22,24 +22,24 @@ export class ExperienceForm extends Component {
 
   render() {
     return (
-        <div id="experience-form">
-                <span id="form-section-title">Experience</span>
+        <div id="experience-forms">
+            <span id="form-section-title">Experience</span>
                 {this.props.experienceItems.map((item, index) => {
                     return (
-                    <form>
+                    <form id="experience-item-form">
                         <input id={index} name="companyName" type="text" placeholder="Name of company/organization" value={item.companyName} onChange={this.handleInputChange}></input>
                         <input id={index} name="jobTitle" type="text" placeholder="Job title/position" value={item.jobTitle} onChange={this.handleInputChange}></input>
-                        <input id={index} name="jobDescription" type="text" placeholder="Job description" value={item.jobDescription} onChange={this.handleInputChange}></input>
-                        <label for="startDate">Start Date</label>
+                        <textarea id={index} name="jobDescription" placeholder="Job description" value={item.jobDescription} onChange={this.handleInputChange}></textarea>
+                        <label htmlFor="startDate">Start Date</label>
                         <input id={index} name="startDate" type="month" data-date="" data-date-format="MM YYYY" value={item.startDate} onChange={this.handleInputChange}></input>
-                        <label for="endDate">End Date</label>
+                        <label htmlFor="endDate">End Date</label>
                         <input id={index} name="endDate" type="month" data-date="" data-date-format="MM YYYY" value={item.endDate} onChange={this.handleInputChange}></input>
-                        <button id={index} onClick={this.deleteItem}>Delete</button>
+                        <button className="delete-item-button" id={index} onClick={this.deleteItem}>Delete Item</button>
                     </form>
                     )
                 })}
-                <button onClick={this.addItem}>Add Experience Item</button>
-            </div>
+            <button id="add-item-button" onClick={this.addItem}>Add Item</button>
+        </div>
     )
   }
 }
