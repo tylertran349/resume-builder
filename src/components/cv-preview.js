@@ -23,82 +23,67 @@ function CVPreview(props) {
                         if(item.startDate === "" && item.endDate === "") {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> | {item.credential}</span>
-                                    <div id="education-right-side">
-                                        <span>{item.institution}</span>
-                                    </div>
+                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
                                 </div> 
                             )
                         } else if(item.startDate === "") {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> | {item.credential}</span>
-                                    <div id="education-right-side">
-                                        <span>{moment(item.endDate).format('MMMM YYYY')}</span>
-                                    </div>
+                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-right-side">{moment(item.endDate).format('MMMM YYYY')}</span>
                                 </div> 
                             )
                         } else if(item.endDate === "") {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> | {item.credential}</span>
-                                    <div id="education-right-side">
-                                        <span>{moment(item.startDate).format('MMMM YYYY')}</span>
-                                    </div>
+                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-right-side">{moment(item.startDate).format('MMMM YYYY')}</span>
                                 </div> 
                             )
                         } else {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> | {item.credential}</span>
-                                    <div id="education-right-side">
-                                        <span>{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
-                                    </div>
+                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-right-side">{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
                                 </div> 
                             )
                         }
                     })}
                 </div>
                 <div id="experience-section">
+                    {props.experienceItems.length !== 0 &&
+                        <span id="cv-section-title">EXPERIENCE<hr/></span>
+                    }
                     {props.experienceItems.map((item) => {
                         if(item.startDate === "" && item.endDate === "") {
                             return (
-                                <div>
-                                    <span>Company name: {item.companyName}</span>
-                                    <span>Job title: {item.jobTitle}</span>
-                                    <span>Job description: {item.jobDescription}</span>
-                                    <span>Start date:</span>
-                                    <span>End date:</span>
+                                <div id="experience-item">
+                                    <span id="company"><strong>{item.companyName}</strong> {(item.companyName.length !== 0 && item.jobTitle.length !== 0) && <span> | </span>} {item.jobTitle}</span>
+                                    <span id="job-description">{item.jobDescription}</span>
                                 </div> 
                             )
                         } else if(item.startDate === "") {
                             return (
-                                <div>
-                                    <span>Company name: {item.companyName}</span>
-                                    <span>Job title: {item.jobTitle}</span>
-                                    <span>Job description: {item.jobDescription}</span>
-                                    <span>Start date:</span>
-                                    <span>End date: {moment(item.endDate).format('MMMM YYYY')}</span>
+                                <div id="experience-item">
+                                    <span id="company"><strong>{item.companyName}</strong> {(item.companyName.length !== 0 && item.jobTitle.length !== 0) && <span> | </span>} {item.jobTitle}</span>
+                                    <span id="experience-dates">{moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="job-description">{item.jobDescription}</span>
                                 </div> 
                             )
                         } else if(item.endDate === "") {
                             return (
-                                <div>
-                                    <span>Company name: {item.companyName}</span>
-                                    <span>Job title: {item.jobTitle}</span>
-                                    <span>Job description: {item.jobDescription}</span>
-                                    <span>Start date: {moment(item.startDate).format('MMMM YYYY')}</span>
-                                    <span>End date:</span>
+                                <div id="experience-item">
+                                    <span id="company"><strong>{item.companyName}</strong> {(item.companyName.length !== 0 && item.jobTitle.length !== 0) && <span> | </span>} {item.jobTitle}</span>
+                                    <span id="experience-dates">{moment(item.startDate).format('MMMM YYYY')}</span>
+                                    <span id="job-description">{item.jobDescription}</span>
                                 </div> 
                             )
                         } else {
                             return (
-                                <div>
-                                    <span>Company name: {item.companyName}</span>
-                                    <span>Job title: {item.jobTitle}</span>
-                                    <span>Job description: {item.jobDescription}</span>
-                                    <span>Start date: {moment(item.startDate).format('MMMM YYYY')}</span>
-                                    <span>End date: {moment(item.endDate).format('MMMM YYYY')}</span>
+                                <div id="experience-item">
+                                    <span id="company"><strong>{item.companyName}</strong> {(item.companyName.length !== 0 && item.jobTitle.length !== 0) && <span> | </span>} {item.jobTitle}</span>
+                                    <span id="experience-dates">{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="job-description">{item.jobDescription}</span>
                                 </div> 
                             )
                         }

@@ -1,7 +1,6 @@
-* {
-    /*
-    border: 1px solid red;
-    */
+@font-face {
+    font-family: Garamond;
+    src: url(../src/assets/garamond.woff);
 }
 
 html {
@@ -31,8 +30,8 @@ body {
 #content {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 30% 4rem 30% 1fr;
-    grid-template-rows: 11rem 1fr 4rem;
+    grid-template-columns: auto 30% 4rem 30% auto;
+    grid-template-rows: 11.2rem auto 4rem;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -52,12 +51,14 @@ body {
     grid-column: 2 / span 1;
     border: 0.2rem solid var(--accent-color);
     border-radius: var(--universal-border-radius);
-    min-height: 99.3%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 #form-section-title {
     font-size: var(--section-title-font-size);
-    color: var(--accent-color);
+    color: #585858;
 }
 
 #personal-info-form {
@@ -95,7 +96,7 @@ textarea[name="jobDescription"] {
 }
 
 label {
-    color: var(--accent-color);
+    color: #585858;
     width: 100%;
     font-size: 1.5rem;
     font-family: inherit;
@@ -157,24 +158,23 @@ label {
     grid-row: 2 / span 1;
     border: 0.2rem solid var(--accent-color);
     border-radius: var(--universal-border-radius);
-    min-height: 99.3%;
-    font-family: 'Garamond', sans-serif;
+    min-height: 100%;
+    font-family: Garamond, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
     padding: 0;
 }
 
 #cv-preview-contents {
-    border: 1px solid red;
     width: 90%;
-    height: 75.75vh;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     font-size: 1.5rem;
 }
 
@@ -216,6 +216,30 @@ hr {
 #education-item {
     display: flex;
     justify-content: space-between;
+}
+
+#experience-item {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-items: start;
+    gap: 0.5rem 0;
+}
+
+#company {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#experience-dates {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: end;
+}
+
+#job-description {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
 }
 
 /* Footer styling */

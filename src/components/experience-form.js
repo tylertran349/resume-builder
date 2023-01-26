@@ -33,7 +33,7 @@ export class ExperienceForm extends Component {
                         <label htmlFor="startDate">Start Date</label>
                         <input id={index} name="startDate" type="month" data-date="" data-date-format="MM YYYY" value={item.startDate} onChange={this.handleInputChange}></input>
                         <label htmlFor="endDate">End Date</label>
-                        <input id={index} name="endDate" type="month" data-date="" data-date-format="MM YYYY" value={item.endDate} onChange={this.handleInputChange}></input>
+                        <input id={index} name="endDate" type="month" data-date="" data-date-format="MM YYYY" min={item.startDate} value={item.endDate} onChange={this.handleInputChange}></input>
                         <button className="delete-item-button" id={index} onClick={this.deleteItem}>Delete Item</button>
                     </form>
                     )
