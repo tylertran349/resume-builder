@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/tylertran349/resume-builder/static/js/main.68ad26c8.js",
-    "index.html": "/tylertran349/resume-builder/index.html",
-    "main.68ad26c8.js.map": "/tylertran349/resume-builder/static/js/main.68ad26c8.js.map"
+    "main.js": "/resume-builder/static/js/main.68ad26c8.js",
+    "index.html": "/resume-builder/index.html",
+    "main.68ad26c8.js.map": "/resume-builder/static/js/main.68ad26c8.js.map"
   },
   "entrypoints": [
     "static/js/main.68ad26c8.js"
