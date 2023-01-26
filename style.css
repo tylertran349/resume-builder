@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Garamond';
+    src: url('./assets/garamond-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('./assets/garamond-bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -154,7 +165,7 @@ label {
     border: 0.2rem solid var(--accent-color);
     border-radius: var(--universal-border-radius);
     min-height: 100%;
-    font-family: 'EB Garamond', sans-serif;
+    font-family: 'Garamond', 'EB Garamond', sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
