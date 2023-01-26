@@ -1,0 +1,277 @@
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    --accent-color: #195c70;
+    --form-gap: 1rem;
+    --section-title-font-size: 2rem;
+    --universal-border-radius: 0.5rem;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: white;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 30% 4rem 30% auto;
+    grid-template-rows: 11.2rem auto 4rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#header {
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 1;
+    text-align: center;
+    align-self: center;
+}
+
+#forms {
+    grid-column: 2 / span 1;
+    border: 0.2rem solid var(--accent-color);
+    border-radius: var(--universal-border-radius);
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#form-section-title {
+    font-size: var(--section-title-font-size);
+    color: #585858;
+}
+
+#personal-info-form {
+    grid-row: 1 / span 1;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--form-gap);
+    margin: 3rem;
+}
+
+input {
+    width: 97.8%;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: calc(0.5 * var(--universal-border-radius));
+}
+
+textarea[name="jobDescription"] {
+    height: 10rem;
+    width: 97.8%;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: calc(0.5 * var(--universal-border-radius));
+    resize: none;
+}
+
+label {
+    color: #585858;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+.delete-item-button {
+    border: 0.1rem solid red;
+    color: red;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: var(--universal-border-radius);
+}
+
+#add-item-button {
+    border: 0.1rem solid var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: var(--universal-border-radius);
+}
+
+#education-forms {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--form-gap);
+    margin: 3rem;
+}
+
+#education-item-form, #experience-item-form {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--form-gap);
+}
+
+#experience-forms {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--form-gap);
+    margin: 3rem;
+}
+
+#cv-preview {
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+    border: 0.2rem solid var(--accent-color);
+    border-radius: var(--universal-border-radius);
+    min-height: 100%;
+    font-family: 'Garamond', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+#cv-preview-contents {
+    width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+#personal-info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#full-name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#bullet-point {
+    font-size: 0.8rem;
+}
+
+#education-section, #experience-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Margin between each education/experience item */
+}
+
+#cv-section-title {
+    font-weight: bold;
+}
+
+hr {
+    margin-top: 0;
+    background: black;
+    height: 1px;
+    margin-bottom: 0.75rem; /* Margin between horizontal line and the education/experience items */
+    border: none;
+}
+
+#education-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+#experience-item {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-items: start;
+    gap: 0.5rem 0;
+}
+
+#company {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#experience-dates {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: end;
+}
+
+#job-description {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+/* Footer styling */
+#footer {
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 1;
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#footer-contents {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer a[target="_blank"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* GitHub footer icon styling */
+.fa-github {
+    color: black;
+    font-size: 2.4rem;
+    transition: transform 0.3s ease-in-out;
+}
+  
+/* GitHub footer icon animation on hover */
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
