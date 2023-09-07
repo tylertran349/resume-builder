@@ -3,7 +3,7 @@ import moment from "moment";
 
 function CVPreview(props) {
     return (
-        <div id="cv-preview">
+        <div id="cv-preview" class="print">
             <div id="cv-preview-contents">
                 <div id="personal-info-section">
                     <span id="full-name">{props.firstName} {props.lastName}</span>
