@@ -239,14 +239,14 @@ label {
 }
 
 #bullet-point {
-    font-size: 0.6rem;
+    font-size: 0.1rem;
 }
 
 #education-section, #experience-section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Margin between each education/experience item */
+    gap: 0.6rem; /* Margin between each education/experience item */
 }
 
 #cv-section-title {
@@ -257,7 +257,7 @@ hr {
     margin-top: 0;
     background: black;
     height: 1px;
-    margin-bottom: 0.75rem; /* Margin between horizontal line and the education/experience items */
+    margin-bottom: 0.25rem; /* Margin between horizontal line and the education/experience items */
     border: none;
 }
 
@@ -266,7 +266,7 @@ hr {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     justify-items: start;
-    gap: 0.5rem 0;
+    margin-bottom: 0.4rem;
 }
 
 #company, #educational-institution {
