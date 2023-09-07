@@ -13,6 +13,10 @@ function CVPreview(props) {
                             <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
                         }
                         <span>{props.phoneNumber}</span>
+                        {((props.email !== "" || props.phoneNumber !== "") && props.website !== "") && 
+                            <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
+                        }
+                        <span>{props.website}</span>
                     </div>
                 </div>
                 <div id="education-section">
