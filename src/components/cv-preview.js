@@ -12,7 +12,7 @@ function CVPreview(props) {
                         {(props.email !== "" && props.phoneNumber !== "") && 
                             <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
                         }
-                        <span>{props.phoneNumber}</span>
+                        <span>{formatPhoneNumber(props.phoneNumber)}</span>
                         {((props.email !== "" || props.phoneNumber !== "") && props.website !== "") && 
                             <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
                         }
@@ -96,6 +96,15 @@ function CVPreview(props) {
             </div>
         </div>
     )
+}
+
+function formatPhoneNumber(phoneNumber) {
+    let cleanedNumber = ('' + phoneNumber).replace(/\D/g, ''); // Remove any non-digit characters
+    let groupedNumber = cleanedNumber.match(/^(\d{3})(\d{3})(\d{4})$/); // Group the first 3 digits (area code), next 3 digits, and last 4 digits
+    if(groupedNumber) {
+        return '(' + groupedNumber[1] + ') ' + groupedNumber[2] + '-' + groupedNumber[3]; // If the input phone number has exactly 10 digits and no non-digit characters, return the phone number in the following format: (123) 456-7890
+    }
+    return phoneNumber; // Return the phone number as-is (unformatted) if it has at least 1 non-digit character and/or does not contain exactly 10 digits
 }
 
 export { CVPreview };
