@@ -27,28 +27,32 @@ function CVPreview(props) {
                         if(item.startDate === "" && item.endDate === "") {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="educational-institution"><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-description">{item.educationDescription}</span>
                                 </div> 
                             )
                         } else if(item.startDate === "") {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
-                                    <span id="education-right-side">{moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="educational-institution"><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-dates">{moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="education-description">{item.educationDescription}</span>
                                 </div> 
                             )
                         } else if(item.endDate === "") {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
-                                    <span id="education-right-side">{moment(item.startDate).format('MMMM YYYY')}</span>
+                                    <span id="educational-institution"><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-dates">{moment(item.startDate).format('MMMM YYYY')}</span>
+                                    <span id="education-description">{item.educationDescription}</span>
                                 </div> 
                             )
                         } else {
                             return (
                                 <div id="education-item">
-                                    <span><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
-                                    <span id="education-right-side">{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="educational-institution"><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
+                                    <span id="education-dates">{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="education-description">{item.educationDescription}</span>
                                 </div> 
                             )
                         }
