@@ -16,13 +16,13 @@
 
 @media print {
     .noprint {
-        display: none;
+        display: none; /* Hide element when printing resume */
     }
     .print {
         display: block;
         position: absolute;
-        width: 100vw;
-        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
         border: 0 !important;
     }
     hr {
@@ -126,7 +126,7 @@ input {
     border-radius: calc(0.5 * var(--universal-border-radius));
 }
 
-textarea[name="jobDescription"] {
+textarea[name="jobDescription"], textarea[name="educationDescription"] {
     height: 10rem;
     width: 97.8%;
     font-family: inherit;
@@ -230,12 +230,16 @@ label {
 }
 
 #full-name {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: bold;
 }
 
+#contact-info span, #education-section span, #experience-section span {
+    font-size: 1.2rem;
+}
+
 #bullet-point {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 #education-section, #experience-section {
@@ -257,12 +261,7 @@ hr {
     border: none;
 }
 
-#education-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-#experience-item {
+#education-item, #experience-item {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
@@ -270,18 +269,18 @@ hr {
     gap: 0.5rem 0;
 }
 
-#company {
+#company, #educational-institution {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
 }
 
-#experience-dates {
+#education-dates, #experience-dates {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     justify-self: end;
 }
 
-#job-description {
+#job-description, #education-description {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
 }
