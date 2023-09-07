@@ -17,6 +17,10 @@ function CVPreview(props) {
                             <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
                         }
                         <span>{props.website}</span>
+                        {((props.email !== "" || props.phoneNumber !== "" || props.website !== "") && props.location !== "") && 
+                            <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
+                        }
+                        <span>{props.location}</span>
                     </div>
                 </div>
                 <div id="education-section">
@@ -51,7 +55,7 @@ function CVPreview(props) {
                             return (
                                 <div id="education-item">
                                     <span id="educational-institution"><strong>{item.institution}</strong> {(item.institution.length !== 0 && item.credential.length !== 0) && <span> | </span>} {item.credential}</span>
-                                    <span id="education-dates">{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="education-dates">{moment(item.startDate).format('MMMM YYYY')} – {moment(item.endDate).format('MMMM YYYY')}</span>
                                     <span id="education-description">{item.educationDescription}</span>
                                 </div> 
                             )
@@ -90,7 +94,7 @@ function CVPreview(props) {
                             return (
                                 <div id="experience-item">
                                     <span id="company"><strong>{item.companyName}</strong> {(item.companyName.length !== 0 && item.jobTitle.length !== 0) && <span> | </span>} {item.jobTitle}</span>
-                                    <span id="experience-dates">{moment(item.startDate).format('MMMM YYYY')} - {moment(item.endDate).format('MMMM YYYY')}</span>
+                                    <span id="experience-dates">{moment(item.startDate).format('MMMM YYYY')} – {moment(item.endDate).format('MMMM YYYY')}</span>
                                     <span id="job-description">{item.jobDescription}</span>
                                 </div> 
                             )
