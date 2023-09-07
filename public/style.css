@@ -1,6 +1,33 @@
 @font-face {
-    font-family: Garamond;
-    src: url(../src/assets/garamond.woff);
+    font-family: 'Garamond';
+    src: url('./assets/garamond-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Garamond';
+    src: url('./assets/garamond-bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@page { /* Removes webpage title and timestamp when printing resume */
+    size: auto;
+    margin: 0mm;
+}
+
+@media print {
+    .noprint {
+        display: none;
+    }
+    .print {
+        display: block;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        border: 0 !important;
+    }
+    hr {
+        border-top: solid 0.1rem black !important; /* Adds horizontal lines between resume sections when printing resume */
+    }
 }
 
 html {
@@ -31,7 +58,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: auto 30% 4rem 30% auto;
-    grid-template-rows: 11.2rem auto 4rem;
+    grid-template-rows: 11.2rem 6rem auto 5rem;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -47,8 +74,25 @@ body {
     align-self: center;
 }
 
+#print-save-button {
+    grid-column: 1 / span 5;
+    justify-self: center;
+    align-self: start;
+    grid-row: 2 / span 1;
+    margin: 0;
+    border: 0.1rem solid var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: var(--universal-border-radius);
+}
+
 #forms {
     grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
     border: 0.2rem solid var(--accent-color);
     border-radius: var(--universal-border-radius);
     min-height: 100%;
@@ -155,11 +199,11 @@ label {
 
 #cv-preview {
     grid-column: 4 / span 1;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
     border: 0.2rem solid var(--accent-color);
     border-radius: var(--universal-border-radius);
     min-height: 100%;
-    font-family: Garamond, sans-serif;
+    font-family: 'Garamond', 'EB Garamond', sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -245,7 +289,7 @@ hr {
 /* Footer styling */
 #footer {
     grid-column: 1 / span 5;
-    grid-row: 3 / span 1;
+    grid-row: 4 / span 1;
     width: 100%;
     text-align: center;
     color: var(--primary-color);
