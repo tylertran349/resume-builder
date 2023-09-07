@@ -10,15 +10,15 @@ function CVPreview(props) {
                     <div id="contact-info">
                         <span>{props.email}</span>
                         {(props.email !== "" && props.phoneNumber !== "") && 
-                            <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
+                            <span id="bullet-point">&nbsp;&nbsp;●&nbsp;&nbsp;</span>
                         }
                         <span>{formatPhoneNumber(props.phoneNumber)}</span>
                         {((props.email !== "" || props.phoneNumber !== "") && props.website !== "") && 
-                            <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
+                            <span id="bullet-point">&nbsp;&nbsp;●&nbsp;&nbsp;</span>
                         }
                         <span>{props.website}</span>
                         {((props.email !== "" || props.phoneNumber !== "" || props.website !== "") && props.location !== "") && 
-                            <span id="bullet-point">&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;</span>
+                            <span id="bullet-point">&nbsp;&nbsp;●&nbsp;&nbsp;</span>
                         }
                         <span>{props.location}</span>
                     </div>
