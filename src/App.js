@@ -17,6 +17,7 @@ class App extends Component {
       lastName: '',
       email: '',
       phoneNumber: '',
+      website: '',
       educationItem: {
         institution: '',
         credential: '',
@@ -128,11 +129,11 @@ class App extends Component {
         <PrintSaveButton />
         <div id="forms" className="noprint">
           <PersonalInfoForm firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email}
-          phoneNumber={this.state.phoneNumber} handleInputChange={this.handleInputChange} />
+          phoneNumber={this.state.phoneNumber} website={this.state.website} handleInputChange={this.handleInputChange} />
           <EducationForm educationItems={this.state.educationItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
           <ExperienceForm experienceItems={this.state.experienceItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
         </div>
-        <CVPreview firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} phoneNumber={this.state.phoneNumber} educationItems={this.state.educationItems} experienceItems={this.state.experienceItems} />
+        <CVPreview firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} phoneNumber={this.state.phoneNumber} website={this.state.website} educationItems={this.state.educationItems} experienceItems={this.state.experienceItems} />
         <Footer />
       </div>
     )
