@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import uniqid from "uniqid";
-import { Header } from "./components/header"
+import { Header } from "./components/header";
 import { PrintSaveButton } from "./components/print-save-button"
 import { PersonalInfoForm } from "./components/personal-info-form";
-import { EducationForm } from "./components/education-form"
-import { ExperienceForm } from "./components/experience-form"
+import { EducationForm } from "./components/education-form";
+import { ExperienceForm } from "./components/experience-form";
+import { SkillsCertificationsInterestsForm } from "./components/skills-certifications-interests-form";
 import { CVPreview } from "./components/cv-preview";
-import { Footer } from "./components/footer"
+import { Footer } from "./components/footer";
 
 class App extends Component {
   constructor(props) {
@@ -39,6 +40,9 @@ class App extends Component {
         id: uniqid()
       },
       experienceItems: [],
+      certifications: '',
+      skills: '',
+      interests: '',
     }
 
     this.addItem = this.addItem.bind(this);
@@ -139,8 +143,9 @@ class App extends Component {
           phoneNumber={this.state.phoneNumber} website={this.state.website} location={this.state.location} handleInputChange={this.handleInputChange} />
           <EducationForm educationItems={this.state.educationItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
           <ExperienceForm experienceItems={this.state.experienceItems} addItem={this.addItem} deleteItem={this.deleteItem} handleInputChange={this.handleInputChange} />
+          <SkillsCertificationsInterestsForm skills={this.state.skills} certifications={this.state.certifications} interests={this.state.interests} handleInputChange={this.handleInputChange} />
         </div>
-        <CVPreview firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} phoneNumber={this.state.phoneNumber} website={this.state.website} location={this.state.location} educationItems={this.state.educationItems} experienceItems={this.state.experienceItems} />
+        <CVPreview firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} phoneNumber={this.state.phoneNumber} website={this.state.website} location={this.state.location} educationItems={this.state.educationItems} experienceItems={this.state.experienceItems} skills={this.state.skills} certifications={this.state.certifications} interests={this.state.interests} />
         <Footer />
       </div>
     )
