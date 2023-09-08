@@ -34,10 +34,6 @@
     hr {
         border-top: solid 0.1rem black !important; /* Show horizontal lines between resume sections when printing resume */
     }
-    div {
-        break-after: always !important;
-        break-inside: avoid !important;
-    }
 }
 
 html {
