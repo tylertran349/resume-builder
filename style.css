@@ -259,6 +259,12 @@ label {
     display: flex;
     flex-direction: column;
     margin-bottom: 0.5rem;
+    gap: 0.6rem;
+}
+
+#skills-certifications-interests-item {
+    display: flex;
+    flex-direction: column;
 }
 
 #cv-section-title {
