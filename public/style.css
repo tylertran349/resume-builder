@@ -10,8 +10,8 @@
 }
 
 @page { /* Removes webpage title and timestamp when printing resume */
-    size: auto;
-    margin: 0mm;
+    size: A4;
+    margin: 10mm;
 }
 
 @media print {
@@ -22,17 +22,21 @@
         display: none; /* Hide element when printing resume */
     }
     .print {
-        display: block;
-        position: absolute;
-        min-width: 100vw;
-        min-height: 100vh;
+        overflow: visible !important;
+        float: none !important;
+        display: block !important;
+        position: absolute !important;
+        min-width: 100vw !important;
         border: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
     hr {
-        border-top: solid 0.1rem black !important; /* Adds horizontal lines between resume sections when printing resume */
+        border-top: solid 0.1rem black !important; /* Show horizontal lines between resume sections when printing resume */
     }
-    span {
-        font-size: 50px;
+    div {
+        break-after: always !important;
+        break-inside: avoid !important;
     }
 }
 
@@ -203,23 +207,14 @@ label {
     margin: 3rem;
 }
 
-#cv-preview {
+#cv-preview-contents {
     grid-column: 4 / span 1;
     grid-row: 3 / span 1;
     border: 0.2rem solid var(--accent-color);
-    border-radius: var(--universal-border-radius);
-    min-height: 100%;
     font-family: 'Garamond', 'EB Garamond', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-}
-
-#cv-preview-contents {
-    width: 90%;
-    margin-top: 2rem;
+    min-height: 100%;
+    max-width: 100%;
+    border-radius: var(--universal-border-radius);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -233,6 +228,7 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2rem 2rem 0 2rem;
 }
 
 #full-name {
@@ -249,7 +245,7 @@ label {
 }
 
 #education-section, #experience-section {
-    width: 100%;
+    width: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
     gap: 0.6rem; /* Margin between each education/experience item */
