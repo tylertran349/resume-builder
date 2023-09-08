@@ -23,6 +23,7 @@ class App extends Component {
         institution: '',
         credential: '',
         educationDescription: '',
+        location: '',
         startDate: '',
         endDate: '',
         id: uniqid()
@@ -32,6 +33,7 @@ class App extends Component {
         companyName: '',
         jobTitle: '',
         jobDescription: '',
+        location: '',
         startDate: '',
         endDate: '',
         id: uniqid()
@@ -53,6 +55,7 @@ class App extends Component {
           institution: '',
           credential: '',
           educationDescription: '',
+          location: '',
           startDate: '',
           endDate: '',
           id: uniqid()
@@ -66,6 +69,7 @@ class App extends Component {
           companyName: '',
           jobTitle: '',
           jobDescription: '',
+          location: '',
           startDate: '',
           endDate: '',
           id: uniqid()
