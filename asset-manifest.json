@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/resume-builder/static/js/main.68ad26c8.js",
+    "main.js": "/resume-builder/static/js/main.fedae951.js",
     "index.html": "/resume-builder/index.html",
-    "main.68ad26c8.js.map": "/resume-builder/static/js/main.68ad26c8.js.map"
+    "main.fedae951.js.map": "/resume-builder/static/js/main.fedae951.js.map"
   },
   "entrypoints": [
-    "static/js/main.68ad26c8.js"
+    "static/js/main.fedae951.js"
   ]
 }
