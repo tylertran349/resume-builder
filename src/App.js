@@ -22,7 +22,7 @@ class App extends Component {
       educationItem: {
         institution: '',
         credential: '',
-        educationDescription: '',
+        description: '',
         location: '',
         startDate: '',
         endDate: '',
@@ -32,7 +32,7 @@ class App extends Component {
       experienceItem: {
         companyName: '',
         jobTitle: '',
-        jobDescription: '',
+        description: '',
         location: '',
         startDate: '',
         endDate: '',
@@ -54,7 +54,7 @@ class App extends Component {
         educationItem: {
           institution: '',
           credential: '',
-          educationDescription: '',
+          description: '',
           location: '',
           startDate: '',
           endDate: '',
@@ -68,7 +68,7 @@ class App extends Component {
         experienceItem: {
           companyName: '',
           jobTitle: '',
-          jobDescription: '',
+          description: '',
           location: '',
           startDate: '',
           endDate: '',
