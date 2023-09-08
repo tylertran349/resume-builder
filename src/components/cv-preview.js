@@ -138,9 +138,11 @@ function CVPreview(props) {
                 {(props.certifications.length !== 0 && props.skills.length !== 0 && props.interests.length !== 0) &&
                     <span id="cv-section-title">CERTIFICATIONS, SKILLS & INTERESTS<hr/></span>
                 }
-                {props.certifications.length !== 0 && <span><strong>Certifications: </strong> {props.certifications}</span>}
-                {props.skills.length !== 0 && <span><strong>Skills: </strong> {props.skills}</span>}
-                {props.interests.length !== 0 && <span><strong>Interests: </strong> {props.interests}</span>}
+                <div id="skills-certifications-interests-item">
+                    {props.certifications.length !== 0 && <span><strong>Certifications: </strong> {props.certifications}</span>}
+                    {props.skills.length !== 0 && <span><strong>Skills: </strong> {props.skills}</span>}
+                    {props.interests.length !== 0 && <span><strong>Interests: </strong> {props.interests}</span>}
+                </div>
             </div>
         </div>
     )
