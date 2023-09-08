@@ -29,6 +29,7 @@ export class ExperienceForm extends Component {
                     <form id="experience-item-form">
                         <input id={index} name="companyName" type="text" placeholder="Name of company/organization" value={item.companyName} onChange={this.handleInputChange}></input>
                         <input id={index} name="jobTitle" type="text" placeholder="Job title/position" value={item.jobTitle} onChange={this.handleInputChange}></input>
+                        <input id={index} name="location" type="text" placeholder="Location" value={item.location} onChange={this.handleInputChange}></input>
                         <textarea id={index} name="jobDescription" placeholder="Job description" value={item.jobDescription} onChange={this.handleInputChange}></textarea>
                         <label htmlFor="startDate">Start Date</label>
                         <input id={index} name="startDate" type="month" data-date="" data-date-format="MM YYYY" value={item.startDate} onChange={this.handleInputChange}></input>
