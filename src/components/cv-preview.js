@@ -116,6 +116,32 @@ function CVPreview(props) {
                     }
                 })}
             </div>
+            <div id="skills-certifications-interests-section">
+                {(props.certifications.length !== 0 && props.skills.length === 0 && props.interests.length === 0) &&
+                    <span id="cv-section-title">CERTIFICATIONS<hr/></span>
+                }
+                {(props.certifications.length === 0 && props.skills.length !== 0 && props.interests.length === 0) &&
+                    <span id="cv-section-title">SKILLS<hr/></span>
+                }
+                {(props.certifications.length === 0 && props.skills.length === 0 && props.interests.length !== 0) &&
+                    <span id="cv-section-title">INTERESTS<hr/></span>
+                }
+                {(props.certifications.length !== 0 && props.skills.length !== 0 && props.interests.length === 0) &&
+                    <span id="cv-section-title">CERTIFICATIONS & SKILLS<hr/></span>
+                }
+                {(props.certifications.length !== 0 && props.skills.length === 0 && props.interests.length !== 0) &&
+                    <span id="cv-section-title">CERTIFICATIONS & INTERESTS<hr/></span>
+                }
+                {(props.certifications.length === 0 && props.skills.length !== 0 && props.interests.length !== 0) &&
+                    <span id="cv-section-title">SKILLS & INTERESTS<hr/></span>
+                }
+                {(props.certifications.length !== 0 && props.skills.length !== 0 && props.interests.length !== 0) &&
+                    <span id="cv-section-title">CERTIFICATIONS, SKILLS & INTERESTS<hr/></span>
+                }
+                {props.certifications.length !== 0 && <span><strong>Certifications: </strong> {props.certifications}</span>}
+                {props.skills.length !== 0 && <span><strong>Skills: </strong> {props.skills}</span>}
+                {props.interests.length !== 0 && <span><strong>Interests: </strong> {props.interests}</span>}
+            </div>
         </div>
     )
 }
