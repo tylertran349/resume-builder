@@ -270,7 +270,7 @@ hr {
 #education-item, #experience-item {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
     justify-items: start;
     margin-bottom: 0.4rem;
 }
@@ -278,17 +278,32 @@ hr {
 #company, #educational-institution {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
+    font-weight: bold;
 }
 
 #education-dates, #experience-dates {
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     justify-self: end;
+    font-weight: bold;
+}
+
+#credential, #job-title {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    font-style: italic;
+}
+
+#location {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    font-style: italic;
+    justify-self: end;
 }
 
 #job-description, #education-description {
     grid-column: 1 / span 2;
-    grid-row: 2 / span 1;
+    grid-row: 3 / span 1;
     white-space: pre-wrap; /* Preserve all whitespace (e.g. line breaks) from input */
 }
 
