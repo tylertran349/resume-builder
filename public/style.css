@@ -132,7 +132,7 @@ input {
     border-radius: calc(0.5 * var(--universal-border-radius));
 }
 
-textarea[name="jobDescription"], textarea[name="educationDescription"] {
+textarea[name="description"] {
     height: 10rem;
     width: 97.8%;
     font-family: inherit;
