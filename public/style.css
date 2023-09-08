@@ -111,7 +111,7 @@ body {
     color: #585858;
 }
 
-#personal-info-form {
+#personal-info-form, #skills-certifications-interests-form {
     grid-row: 1 / span 1;
     display: flex; 
     flex-direction: column;
@@ -232,7 +232,7 @@ label {
     font-weight: bold;
 }
 
-#contact-info span, #education-section span, #experience-section span {
+#contact-info span, #education-section span, #experience-section span, #skills-certifications-interests-section span {
     font-size: 1.2rem;
 }
 
@@ -252,7 +252,19 @@ label {
     display: flex;
     flex-direction: column;
     gap: 0.6rem; /* Margin between each education/experience item */
+}
+
+#skills-certifications-interests-section {
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0.5rem;
+    gap: 0.6rem;
+}
+
+#skills-certifications-interests-item {
+    display: flex;
+    flex-direction: column;
 }
 
 #cv-section-title {
