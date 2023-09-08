@@ -29,6 +29,7 @@ export class EducationForm extends Component {
                     <form id="education-item-form">
                         <input id={index} name="institution" type="text" placeholder="Name of university/institution" value={item.institution} onChange={this.handleInputChange}></input>
                         <input id={index} name="credential" type="text" placeholder="Degree/credential/course name" value={item.credential} onChange={this.handleInputChange}></input>
+                        <input id={index} name="location" type="text" placeholder="Location" value={item.location} onChange={this.handleInputChange}></input>
                         <textarea id={index} name="educationDescription" placeholder="GPA, extracurriculars, awards/honors, relevant coursework, etc." value={item.educationDescription} onChange={this.handleInputChange}></textarea>
                         <label htmlFor="startDate">Start Date</label>
                         <input id={index} name="startDate" type="month" data-date="" data-date-format="MMMM YYYY" value={item.startDate} onChange={this.handleInputChange}></input>
