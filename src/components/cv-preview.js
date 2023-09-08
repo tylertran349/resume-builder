@@ -34,7 +34,7 @@ function CVPreview(props) {
                                     <span id="educational-institution">{item.institution}</span>
                                     <span id="credential">{item.credential}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="education-description">{item.educationDescription}</span>
+                                    <span id="education-description">{item.description}</span>
                                 </div> 
                             )
                         } else if(item.startDate === "") {
@@ -44,7 +44,7 @@ function CVPreview(props) {
                                     <span id="education-dates">{moment(item.endDate).format('MMMM YYYY')}</span>
                                     <span id="credential">{item.credential}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="education-description">{item.educationDescription}</span>
+                                    <span id="education-description">{item.description}</span>
                                 </div> 
                             )
                         } else if(item.endDate === "") {
@@ -54,7 +54,7 @@ function CVPreview(props) {
                                     <span id="education-dates">{moment(item.startDate).format('MMMM YYYY')}</span>
                                     <span id="credential">{item.credential}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="education-description">{item.educationDescription}</span>
+                                    <span id="education-description">{item.description}</span>
                                 </div> 
                             )
                         } else {
@@ -64,7 +64,7 @@ function CVPreview(props) {
                                     <span id="education-dates">{moment(item.startDate).format('MMMM YYYY')} – {moment(item.endDate).format('MMMM YYYY')}</span>
                                     <span id="credential">{item.credential}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="education-description">{item.educationDescription}</span>
+                                    <span id="education-description">{item.description}</span>
                                 </div> 
                             )
                         }
@@ -81,7 +81,7 @@ function CVPreview(props) {
                                     <span id="company">{item.companyName}</span>
                                     <span id="job-title">{item.jobTitle}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="job-description">{item.jobDescription}</span>
+                                    <span id="job-description">{item.description}</span>
                                 </div> 
                             )
                         } else if(item.startDate === "") {
@@ -91,7 +91,7 @@ function CVPreview(props) {
                                     <span id="experience-dates">{moment(item.endDate).format('MMMM YYYY')}</span>
                                     <span id="job-title">{item.jobTitle}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="job-description">{item.jobDescription}</span>
+                                    <span id="job-description">{item.description}</span>
                                 </div> 
                             )
                         } else if(item.endDate === "") {
@@ -101,7 +101,7 @@ function CVPreview(props) {
                                     <span id="experience-dates">{moment(item.startDate).format('MMMM YYYY')}</span>
                                     <span id="job-title">{item.jobTitle}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="job-description">{item.jobDescription}</span>
+                                    <span id="job-description">{item.description}</span>
                                 </div> 
                             )
                         } else {
@@ -111,7 +111,7 @@ function CVPreview(props) {
                                     <span id="experience-dates">{moment(item.startDate).format('MMMM YYYY')} – {moment(item.endDate).format('MMMM YYYY')}</span>
                                     <span id="job-title">{item.jobTitle}</span>
                                     <span id="location">{item.location}</span>
-                                    <span id="job-description">{item.jobDescription}</span>
+                                    <span id="job-description">{item.description}</span>
                                 </div> 
                             )
                         }
