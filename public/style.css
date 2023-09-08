@@ -15,6 +15,9 @@
 }
 
 @media print {
+    html {
+        font-size: 13.33px !important; /* 1 px = 1.33 pt */
+    }
     .noprint {
         display: none; /* Hide element when printing resume */
     }
@@ -27,6 +30,9 @@
     }
     hr {
         border-top: solid 0.1rem black !important; /* Adds horizontal lines between resume sections when printing resume */
+    }
+    span {
+        font-size: 50px;
     }
 }
 
@@ -283,6 +289,7 @@ hr {
 #job-description, #education-description {
     grid-column: 1 / span 2;
     grid-row: 2 / span 1;
+    white-space: pre-wrap; /* Preserve all whitespace (e.g. line breaks) from input */
 }
 
 /* Footer styling */
